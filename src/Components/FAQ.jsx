@@ -2,14 +2,16 @@
 
 const FAQ = () => {
     return (
-        <div>
+        <div className="py-12 max-w-7xl mx-auto">
+            <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">Freequently <span className="text-5xl text-center font-bold text-orange-600">ask question</span></h2>
+
             <div className="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div className="collapse-title text-xl font-medium">
                 How do I place an order?
                 </div>
                 <div className="collapse-content">
-                    <p>To place an order, simply browse our product catalog, select the item you want, and click "Add to Cart." Once you've added all the items you wish to purchase, go to your cart and follow the checkout process. You'll need to provide your shipping information and payment details to complete your order.
+                    <p>To place an order, simply browse our product catalog, select the item you want, and click Add to Cart. Once youve added all the items you wish to purchase, go to your cart and follow the checkout process. Youll need to provide your shipping information and payment details to complete your order.
                     </p>
                 </div>
             </div>
@@ -39,7 +41,7 @@ const FAQ = () => {
                 What is your return policy?
                 </div>
                 <div className="collapse-content">
-                    <p>We have a customer-friendly return policy. If you're not completely satisfied with your purchase, you can return it within [number] days of receiving it. Please visit our "Returns & Refunds" page for detailed information on the return process and conditions.
+                    <p>We have a customer-friendly return policy. If youre not completely satisfied with your purchase, you can return it within [number] days of receiving it. Please visit our Returns & Refunds page for detailed information on the return process and conditions.
 </p>
                 </div>
             </div>

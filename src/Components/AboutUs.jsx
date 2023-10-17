@@ -2,10 +2,10 @@
 
 const AboutUs = () => {
     return (
-        <div>
+        <div className="max-w-7xl mx-auto m-5">
             <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">About <span className="text-5xl text-center font-bold text-orange-600">US</span></h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
                     <div className="p-6">
                         <svg
@@ -23,11 +23,10 @@ const AboutUs = () => {
                             <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"></path>
                         </svg>
                         <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            UI/UX Review Check
+                        Our Journey
                         </h5>
                         <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-                            Because it's about motivating the doers. Because I'm here to follow my
-                            dreams and inspire others.
+                        Over the years, our commitment to quality, customer satisfaction, and technological innovation has fueled our growth. Today, we're proud to be a trusted destination for tech-savvy individuals and businesses alike.
                         </p>
                     </div>
                     <div className="p-6 pt-0">
@@ -77,11 +76,10 @@ const AboutUs = () => {
                             <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"></path>
                         </svg>
                         <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            UI/UX Review Check
+                        Our Vision
                         </h5>
                         <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-                            Because it's about motivating the doers. Because I'm here to follow my
-                            dreams and inspire others.
+                        Our vision is clear - to be your trusted source for all things tech. We believe that technology should simplify, empower, and elevate your life. It should be a tool that opens doors, fosters creativity, and enhances communication. We strive to offer not just products but solutions that bridge the gap between you and a more connected, efficient, and enjoyable future.
                         </p>
                     </div>
                     <div className="p-6 pt-0">
@@ -114,7 +112,7 @@ const AboutUs = () => {
                         </a>
                     </div>
                 </div>
-                <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
+                <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border md:hidden lg:block">
                     <div className="p-6">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -131,11 +129,10 @@ const AboutUs = () => {
                             <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"></path>
                         </svg>
                         <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            UI/UX Review Check
+                        Our Team
                         </h5>
                         <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-                            Because it's about motivating the doers. Because I'm here to follow my
-                            dreams and inspire others.
+                        Behind the screens and beyond the keyboards, our team of dedicated professionals is the driving force of [Your Company Name]. From our tech experts who meticulously curate our product selection to our customer support team, every member is united by a shared love for technology and a commitment to providing you with the best service possible.
                         </p>
                     </div>
                     <div className="p-6 pt-0">
