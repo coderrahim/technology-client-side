@@ -11,6 +11,7 @@ const AddedAllProducts = () => {
 
                         <img src={product?.image} alt="" />
                         <h2 className="text-2xl text-center"> {product?.name} </h2>
+                        <h2 className="text-2xl text-center"> {product?.brand} </h2>
 
                     </div>)
                 }

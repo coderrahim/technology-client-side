@@ -1,10 +1,12 @@
+import { useLoaderData } from "react-router-dom";
 import AboutUs from "../Components/AboutUs";
 import FAQ from "../Components/FAQ";
 import Footer from "../Components/Footer";
-
+import Brands from "../Components/Brands";
 
 
 const Home = () => {
+    const brands = useLoaderData()
     return (
         <div>
             {/* Banner SEction */}
@@ -16,6 +18,17 @@ const Home = () => {
                         <p className="mb-5">Were dedicated to bringing you the latest and greatest in the world of technology. Whether youre a tech enthusiast, a professional seeking top-of-the-line gear, or someone looking for reliable everyday gadgets, youve come to the right place.</p>
                         <button className="btn btn-primary">Our Brand</button>
                     </div>
+                </div>
+            </div>
+
+            {/* BRAND SECTION */}
+            <div>
+                <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">Our <span className="text-5xl text-center font-bold text-orange-600"> Brand</span></h2>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 m-4 my-12 max-w-7xl mx-auto">
+                    {
+                        brands.map(brand => <Brands key={brand._id} brand={brand}></Brands>)
+                    }
                 </div>
             </div>
 
