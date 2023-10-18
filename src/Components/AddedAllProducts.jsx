@@ -6,7 +6,7 @@ const AddedAllProducts = () => {
         <div>
             all pro
             <div className="grid grid-cols-2 gap-5">
-                {
+                {/* {
                     allProducts.map(product => <div key={product._id}>
 
                         <img src={product?.image} alt="" />
@@ -14,7 +14,7 @@ const AddedAllProducts = () => {
                         <h2 className="text-2xl text-center"> {product?.brand} </h2>
 
                     </div>)
-                }
+                } */}
             </div>
         </div>
     );

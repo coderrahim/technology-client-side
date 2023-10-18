@@ -15,6 +15,8 @@ import AddedAllProducts from './Components/AddedAllProducts';
 import AddBrand from './Components/AddBrand';
 import Brands from './Components/Brands';
 import BrandProducts from './pages/BrandProducts';
+import DetailsProduct from './pages/DetailsProduct';
+import UpdateProduct from './pages/UpdateProduct';
 
 const router = createBrowserRouter([
   {
@@ -32,10 +34,6 @@ const router = createBrowserRouter([
         element: <AddProduct></AddProduct>
       },
       {
-        path: '/addprmoduct',
-        element: <AddProduct></AddProduct>
-      },
-      {
         path: '/mycart',
         element: <MyCart></MyCart>
       },
@@ -47,24 +45,30 @@ const router = createBrowserRouter([
         path: '/registration',
         element: <Registration></Registration>
       },
-      {
-        path: '/allproduct',
-        element: <AddedAllProducts></AddedAllProducts>,
-        loader: () => fetch('http://localhost:5000/products')
-      },
+      // {
+      //   path: '/allproduct/:id',
+      //   element: <AddedAllProducts></AddedAllProducts>,
+      //   loader: () => fetch('http://localhost:5000/products')
+      // },
       {
         path: '/addbrand',
         element: <AddBrand></AddBrand>
-      },
-      {
-        path: '/brands',
-        element: <Brands></Brands>,
       },
       {
         path: '/brandproducts/:brand',
         element: <BrandProducts></BrandProducts>,
         loader: ({params}) => fetch(`http://localhost:5000/products/${params.brand}`)
       },
+      {
+        path: '/detailsProduct/:id',
+        element: <DetailsProduct></DetailsProduct>,
+        loader: ({params}) => fetch(`http://localhost:5000/productsUp/${params.id}`)
+      },
+      {
+        path: '/updatedProduct/:id',
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params}) => fetch(`http://localhost:5000/productsUp/${params.id}`)
+      }
     ])
   },
 ]);

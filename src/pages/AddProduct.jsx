@@ -108,8 +108,8 @@ const AddProduct = () => {
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Short description</span>
-                                </label>
-                                <input type="text" name="description" className="input input-bordered"  />
+                                </label>                                
+                                <textarea name="description" id="" cols="30" rows="5" className=" input-bordered" ></textarea>
                             </div>
 
                             <div className="form-control mt-6">
