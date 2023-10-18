@@ -1,5 +1,6 @@
 import AboutUs from "../Components/AboutUs";
 import FAQ from "../Components/FAQ";
+import Footer from "../Components/Footer";
 
 
 
@@ -23,6 +24,9 @@ const Home = () => {
 
             {/* FAQ SEction */}
             <FAQ></FAQ>
+
+            {/* Footer Section */}
+            <Footer></Footer>
         </div>
     );
 };
