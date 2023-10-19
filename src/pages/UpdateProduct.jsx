@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const UpdateProduct = () => {
@@ -19,7 +20,7 @@ const UpdateProduct = () => {
         const updateProduct = { name, brand, product, image, price, ratting, description };
         console.log(updateProduct);
 
-        fetch(`http://localhost:5173/updatedProduct/${_id}`, {
+        fetch(`http://localhost:5000/updateProduct/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type" : "application/json"
@@ -29,6 +30,13 @@ const UpdateProduct = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            if(data.modifiedCount){
+                Swal.fire(
+                    'Good job!',
+                    'Product Update Successfull!',
+                    'success'
+                  )
+            }
         })
     }
 
@@ -105,7 +113,7 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Short description</span>
                                 </label>                                
-                                <textarea name="description" defaultValue={description} id="" cols="" rows="8" className=" input-bordered" ></textarea>
+                                <textarea name="description" defaultValue={description} id="" cols="" rows="8" className=" input-bordered border" ></textarea>
                             </div>
 
                             <div className="form-control mt-6">

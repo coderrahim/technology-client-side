@@ -1,14 +1,46 @@
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyCart = () => {
     const cartProduct = useLoaderData()
 
+    const handleDelete = (_id) => {
+        console.log("hi", _id)
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+            
+                fetch(`http://localhost:5000/addtocart/${_id}`, {
+                    method: "DELETE"
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if(data.deletedCount > 0){
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        )
+                    }
+                })
+            }
+        })
+    }
+
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 m-5 max-w-7xl mx-auto">
             {
                 cartProduct.map(cart => <div key={cart._id}>
-                   
+
                     <div>
                         <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border space-y-3">
                             <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-72 rounded-lg  bg-clip-border">
@@ -41,13 +73,11 @@ const MyCart = () => {
 
                             </div>
                             <div className="p-6 pt-0 flex items-center justify-between">
-                                <Link to={`/detailsProduct/${cart._id}`}>
-                                    <button className="btn btn-primary">Details</button>
+                                <Link to={-1}>
+                                    <button className="btn btn-primary">Go Home</button>
                                 </Link>
 
-                                <Link to={`/updatedProduct/${cart._id}`}>
-                                    <button className="btn btn-warning">Update</button>
-                                </Link>
+                                <button onClick={() => handleDelete(cart._id)} className="btn btn-warning">Delete</button>
                             </div>
                         </div>
                     </div>

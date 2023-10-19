@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             {/* Banner SEction */}
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=740&t=st=1697559337~exp=1697559937~hmac=fde732a63f9510e0fe5a414d8fc1f2434605eef6a75c79f968bf770ffe31aa86)' }}>
+            {/* <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=740&t=st=1697559337~exp=1697559937~hmac=fde732a63f9510e0fe5a414d8fc1f2434605eef6a75c79f968bf770ffe31aa86)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
@@ -19,10 +19,10 @@ const Home = () => {
                         <button className="btn btn-primary">Our Brand</button>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* BRAND SECTION */}
-            <div>
+            <div className="bg-gray-100 py-12">
                 <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">Our <span className="text-5xl text-center font-bold text-orange-600"> Brand</span></h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 m-4 my-12 max-w-7xl mx-auto">

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Brands = ({brand}) => {
 
     return (
-        <div className="flex flex-col items-center justify-center text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+        <div className="flex flex-col items-center justify-center text-gray-700 bg-white shadow-xl rounded-xl bg-clip-border">
             <div className=" h-60 w-60 m-6 flex items-center top-0 rounded-full border p-8 shadow-md">
                 <img className="w-full" src={brand?.image} alt="profile-picture" />
             </div>
@@ -15,7 +15,7 @@ const Brands = ({brand}) => {
                 </h4>
             </div>
             <Link to={`/brandproducts/${brand.brand}`}>
-                <button  className="btn btn-primary mb-5 shadow-lg" >See Products</button>
+                <button  className="btn btn-primary mb-10 shadow-lg" >See Products</button>
             </Link>
         </div>
     );

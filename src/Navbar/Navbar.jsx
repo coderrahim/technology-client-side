@@ -41,12 +41,8 @@ const Navbar = () => {
             user ?
               <div className="flex items-center justify-center gap-5">
 
-                <div>
-                  <button onClick={logOut} className="btn btn-outline btn-sm md:btn-md btn-primary">Logout</button>
-                </div>
-
                 <div className="dropdown dropdown-end">
-                  <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <label tabIndex={0} className="btn btn-ghost shadow-xl btn-circle avatar">
                     <div className="w-12 rounded-full">
                       <img src={user?.photoURL} />
                     </div>
@@ -56,6 +52,10 @@ const Navbar = () => {
                     <li className="text-xl my-3 font-medium "> {user?.email} </li>
 
                   </ul>
+                </div>
+
+                <div>
+                  <button onClick={logOut} className="btn btn-outline btn-sm md:btn-md btn-primary">Logout</button>
                 </div>
               </div>
               :

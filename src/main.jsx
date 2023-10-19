@@ -65,12 +65,12 @@ const router = createBrowserRouter([
       {
         path: '/detailsProduct/:id',
         element: <DetailsProduct></DetailsProduct>,
-        loader: ({ params }) => fetch(`http://localhost:5000/productsUp/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/detailsProducts/${params.id}`)
       },
       {
-        path: '/updatedProduct/:id',
+        path: '/updateProduct/:id',
         element: <UpdateProduct></UpdateProduct>,
-        loader: ({ params }) => fetch(`http://localhost:5000/productsUp/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/detailsProducts/${params.id}`)
       }
     ])
   },
