@@ -13,10 +13,10 @@ import Login from './pages/Login';
 import Registration from './pages/Registration';
 import AddedAllProducts from './Components/AddedAllProducts';
 import AddBrand from './Components/AddBrand';
-import Brands from './Components/Brands';
 import BrandProducts from './pages/BrandProducts';
 import DetailsProduct from './pages/DetailsProduct';
 import UpdateProduct from './pages/UpdateProduct';
+import AuthProvider from './Provider/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -45,11 +45,11 @@ const router = createBrowserRouter([
         path: '/registration',
         element: <Registration></Registration>
       },
-      // {
-      //   path: '/allproduct/:id',
-      //   element: <AddedAllProducts></AddedAllProducts>,
-      //   loader: () => fetch('http://localhost:5000/products')
-      // },
+      {
+        path: '/allproduct/',
+        element: <AddedAllProducts></AddedAllProducts>,
+        loader: () => fetch('http://localhost:5000/products')
+      },
       {
         path: '/addbrand',
         element: <AddBrand></AddBrand>
@@ -57,17 +57,17 @@ const router = createBrowserRouter([
       {
         path: '/brandproducts/:brand',
         element: <BrandProducts></BrandProducts>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.brand}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
       },
       {
         path: '/detailsProduct/:id',
         element: <DetailsProduct></DetailsProduct>,
-        loader: ({params}) => fetch(`http://localhost:5000/productsUp/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/productsUp/${params.id}`)
       },
       {
         path: '/updatedProduct/:id',
         element: <UpdateProduct></UpdateProduct>,
-        loader: ({params}) => fetch(`http://localhost:5000/productsUp/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/productsUp/${params.id}`)
       }
     ])
   },
@@ -75,6 +75,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

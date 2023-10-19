@@ -44,7 +44,7 @@ const DetailsProduct = () => {
                     <Link to=''>
                         <button className="btn btn-primary btn-outline text-lg font-bold w-full">Add to cart</button>
                     </Link>
-                    <Link to=''>
+                    <Link to={-1}>
                         <button className="btn btn-primary w-full my-5">BAckt</button>
                     </Link>
                 </div>
