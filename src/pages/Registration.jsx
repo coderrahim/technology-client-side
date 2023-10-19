@@ -38,8 +38,7 @@ const Registration = () => {
 
         // Create user firebase
         createUser(email, password)
-        .then(result => {
-            console.log(result.user)
+        .then(() => {
             Swal.fire(
                 'Good Job!',
                 `Account Create Successul`,
