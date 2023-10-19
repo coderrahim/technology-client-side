@@ -3,7 +3,7 @@
 const AboutUs = () => {
     return (
         <div className="max-w-7xl mx-auto m-5 py-12">
-            <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">About <span className="text-5xl text-center font-bold text-orange-600">US</span></h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-violet-700 py-12 uppercase">About <span className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-orange-600">US</span></h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div className="relative flex flex-col mt-6 text-gray-700 bg-violet-100 shadow-md w-96 rounded-xl bg-clip-border mx-auto">

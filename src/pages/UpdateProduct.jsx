@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
     const updateProduct = useLoaderData()
-    const {_id, name, brand, product, image, price, ratting, description } = updateProduct;
+    const {_id, name, brand, product, image, price, ratting,  } = updateProduct;
     
     const handleUpdateProduct = (e) => {
         e.preventDefault();
@@ -14,11 +14,9 @@ const UpdateProduct = () => {
         const product = form.product.value;
         const image = form.image.value;
         const price = form.price.value;
-        const description = form.description.value;
         const ratting = form.ratting.value;
 
-        const updateProduct = { name, brand, product, image, price, ratting, description };
-        console.log(updateProduct);
+        const updateProduct = { name, brand, product, image, price, ratting,  };
 
         fetch(`http://localhost:5000/updateProduct/${_id}`, {
             method: "PUT",
@@ -29,7 +27,6 @@ const UpdateProduct = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             if(data.modifiedCount){
                 Swal.fire(
                     'Good job!',
@@ -109,12 +106,12 @@ const UpdateProduct = () => {
                                 <input type="number" min={0} max={5} name="ratting" defaultValue={ratting} className="input input-bordered" required />
                             </div>
 
-                            <div className="form-control">
+                            {/* <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Short description</span>
                                 </label>                                
                                 <textarea name="description" defaultValue={description} id="" cols="" rows="8" className=" input-bordered border" ></textarea>
-                            </div>
+                            </div> */}
 
                             <div className="form-control mt-6">
                                 <button type="submit" className="btn btn-primary">Update Product</button>

@@ -4,7 +4,7 @@ const FAQ = () => {
     return (
         <div className="">
             <div className="py-12 max-w-7xl mx-auto">
-                <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">Freequently <span className="text-5xl text-center font-bold text-orange-600">ask question</span></h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-violet-700 py-12 uppercase">Freequently <span className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-orange-600">ask question</span></h2>
 
                 <div className="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" checked="checked" />

@@ -43,7 +43,7 @@ const DetailsProduct = () => {
                 </div>
                 <div className="p-6">
                     <div className=" items-center justify-between mb-3">
-                        <p className="block font-sans text-4xl text-center antialiased font-medium leading-relaxed text-blue-gray-900 bg-violet-700 rounded-full text-white py-2">
+                        <p className="block font-sans text-2xl md:text-3xl lg:text-4xl text-center antialiased font-medium leading-relaxed text-blue-gray-900 bg-violet-700 rounded-full text-white py-2">
                             {name}
                         </p>
                         <p className="block font-sans text-4xl text-center antialiased font-medium leading-relaxed text-blue-gray-900">
@@ -52,10 +52,10 @@ const DetailsProduct = () => {
                     </div>
                     <hr />
                     <div className="flex items-center justify-between my-3">
-                        <p className="block font-sans text-4xl text-center antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
+                        <p className="block font-sans text-xl md:text-2xl text-center antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
                             {brand}
                         </p>
-                        <p className="block font-sans text-4xl text-center antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
+                        <p className="block font-sans text-xl md:text-2xl text-center antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
                             {product}
                         </p>
                     </div>

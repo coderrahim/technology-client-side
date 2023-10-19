@@ -10,7 +10,7 @@ const Brands = ({brand}) => {
                 <img className="w-full" src={brand?.image} alt="profile-picture" />
             </div>
             <div className="p-6 text-center">
-                <h4 className="block mb-2 font-sans text-5xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                <h4 className="block mb-2 font-sans text-3xl md:text-4xl lg:text-5xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                     {brand?.name}
                 </h4>
             </div>

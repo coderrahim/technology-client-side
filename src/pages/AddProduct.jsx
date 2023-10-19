@@ -41,7 +41,7 @@ const AddProduct = () => {
             <div className="hero bg-base-200">
                 <div className="">
         
-                    <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">Add <span className="text-5xl text-center font-bold text-orange-600">Product</span></h2>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-violet-700 py-5 uppercase">Add <span className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-orange-600">Product</span></h2>
 
                     <div className="card flex-shrink-0 w-full max-w-lg shadow-xl bg-base-100">
 
