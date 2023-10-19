@@ -17,11 +17,13 @@ import BrandProducts from './pages/BrandProducts';
 import DetailsProduct from './pages/DetailsProduct';
 import UpdateProduct from './pages/UpdateProduct';
 import AuthProvider from './Provider/AuthProvider';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
 
     children: ([
       {
