@@ -91,7 +91,7 @@ const Registration = () => {
                                 <input type="text" name="photo" placeholder="" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn text-white bg-orange-600" type="submit" value="Sign UP " />
+                                <input className="btn text-white bg-orange-600 hover:text-orange-600 hover:font-bold hover:border-orange-600 hover:bg-transparent" type="submit" value="Sign UP " />
                             </div>
 
                         </form>

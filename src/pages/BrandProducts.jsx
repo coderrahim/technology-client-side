@@ -12,8 +12,8 @@ const BrandProducts = () => {
         <div className="max-w-7xl mx-auto m-5">
             {
                 brandProducts.length == 0 ?
-                    <div className="h-screen flex flex-col items-center justify-center">
-                        <h1 className="text-5xl font-bold">Oops!</h1>
+                    <div className="min-h-fit flex flex-col items-center justify-center">
+                        <h1 className="text-5xl mt-10 font-bold">Sorry!</h1>
                         <p className="text-xl my-6">No product available in this Brand, <br />
                             Please come back again leter.
                         </p>

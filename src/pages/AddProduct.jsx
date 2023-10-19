@@ -107,13 +107,13 @@ const AddProduct = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Short description</span>
+                                    <span className="label-text">Short Description</span>
                                 </label>                                
-                                <textarea name="description" id="" cols="30" rows="5" className=" input-bordered" ></textarea>
+                                <textarea name="description" id="" cols="30" rows="5" className=" input input-bordered" ></textarea>
                             </div>
 
-                            <div className="form-control mt-6">
-                                <button type="submit" className="btn btn-primary">Add Product</button>
+                            <div className="form-control mt-6 ">
+                                <button type="submit" className="btn text-white bg-orange-600 hover:text-orange-600 hover:font-bold hover:border-orange-600 hover:bg-transparent">Add Product</button>
                             </div>
                         </form>
                     </div>

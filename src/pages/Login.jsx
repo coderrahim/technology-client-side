@@ -80,7 +80,7 @@ const Login = () => {
                         </div>
 
                         <div className="form-control mt-6">
-                            <input className="btn text-white bg-orange-600" type="submit" value="Sign In " />
+                            <input className="btn text-white bg-orange-600 hover:text-orange-600 hover:font-bold hover:border-orange-600 hover:bg-transparent" type="submit" value="Sign In " />
                         </div>
 
                     </form>

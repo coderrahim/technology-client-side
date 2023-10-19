@@ -35,7 +35,7 @@ const AddBrand = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero  bg-base-200">
                 <div className="hero-content flex-col">
                     <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">Add <span className="text-5xl text-center font-bold text-orange-600">Brand</span></h2>
 
@@ -72,7 +72,7 @@ const AddBrand = () => {
                                 <input type="text" name="image" placeholder="" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn text-white bg-orange-600" type="submit" value="Add Brand" />
+                                <input className="btn text-white bg-orange-600 hover:text-orange-600 hover:font-bold hover:border-orange-600 hover:bg-transparent" type="submit" value="Add Brand" />
                             </div>
 
                         </form>
