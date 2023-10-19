@@ -6,8 +6,8 @@ import Swal from "sweetalert2";
 
 const Login = () => {
     const { loginUser, googleLogin } = useContext(AuthContext)
-    const location = useLocation()
-    const navigate = useNavigate()
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleSignIn = e => {
         e.preventDefault()
@@ -17,13 +17,13 @@ const Login = () => {
 
         // Sign in firebase
         loginUser(email, password)
-            .then((e) => {
-                console.log(e.user)
+            .then(() => {
                 Swal.fire(
                     'Good Job!',
                     `Login Successul`,
                     'success'
                 )
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 Swal.fire(

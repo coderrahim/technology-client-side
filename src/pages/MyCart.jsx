@@ -1,12 +1,13 @@
+import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const MyCart = () => {
-    const cartProduct = useLoaderData()
+    const loadedCartProduct = useLoaderData()
+    const [cartProduct, setCartProduct] = useState(loadedCartProduct);
 
     const handleDelete = (_id) => {
-        console.log("hi", _id)
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -23,13 +24,14 @@ const MyCart = () => {
                 })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
                     if(data.deletedCount > 0){
                         Swal.fire(
                             'Deleted!',
                             'Your file has been deleted.',
                             'success'
                         )
+                        const remaining = cartProduct.filter(product => product._id !== _id)
+                        setCartProduct(remaining)
                     }
                 })
             }
