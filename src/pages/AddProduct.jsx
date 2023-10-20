@@ -16,7 +16,7 @@ const AddProduct = () => {
         const newProduct = { name, brand, product, image, price, ratting, description };
         form.reset()
 
-        fetch('https://tech-zone-iota.vercel.app/products', {
+        fetch('https://technology-server-side.vercel.app/products', {
             method: "POST",
             headers: {
                 "content-type" : "application/json"

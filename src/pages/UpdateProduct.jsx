@@ -18,7 +18,7 @@ const UpdateProduct = () => {
 
         const updateProduct = { name, brand, product, image, price, ratting,  };
 
-        fetch(`https://tech-zone-iota.vercel.app/updateProduct/${_id}`, {
+        fetch(`https://technology-server-side.vercel.app/updateProduct/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type" : "application/json"

@@ -11,7 +11,6 @@ import AddProduct from './pages/AddProduct';
 import MyCart from './pages/MyCart';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
-import AddedAllProducts from './Components/AddedAllProducts';
 import AddBrand from './Components/AddBrand';
 import BrandProducts from './pages/BrandProducts';
 import DetailsProduct from './pages/DetailsProduct';
@@ -30,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('https://tech-zone-iota.vercel.app/brands')
+        loader: () => fetch('https://technology-server-side.vercel.app/brands')
       },
       {
         path: '/addproduct',
@@ -39,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: '/mycart',
         element: <PrivateRouter><MyCart></MyCart></PrivateRouter>,
-        loader: () => fetch('https://tech-zone-iota.vercel.app/addtocart')
+        loader: () => fetch('https://technology-server-side.vercel.app/addtocart')
       },
       {
         path: '/login',
@@ -50,28 +49,23 @@ const router = createBrowserRouter([
         element: <Registration></Registration>
       },
       {
-        path: '/allproduct/',
-        element: <AddedAllProducts></AddedAllProducts>,
-        loader: () => fetch('https://tech-zone-iota.vercel.app/products'),
-      },
-      {
         path: '/addbrand',
-        element: <AddBrand></AddBrand>
+        element: <PrivateRouter><AddBrand></AddBrand></PrivateRouter>
       },
       {
         path: '/brandproducts/:brand',
         element: <BrandProducts></BrandProducts>,
-        loader: ({ params }) => fetch(`https://tech-zone-iota.vercel.app/products/${params.brand}`)
+        loader: ({ params }) => fetch(`https://technology-server-side.vercel.app/products/${params.brand}`)
       },
       {
         path: '/detailsProduct/:id',
         element: <PrivateRouter><DetailsProduct></DetailsProduct></PrivateRouter>,
-        loader: ({ params }) => fetch(`https://tech-zone-iota.vercel.app/detailsProducts/${params.id}`)
+        loader: ({ params }) => fetch(`https://technology-server-side.vercel.app/detailsProducts/${params.id}`)
       },
       {
         path: '/updateProduct/:id',
         element: <PrivateRouter><UpdateProduct></UpdateProduct></PrivateRouter>,
-        loader: ({params}) => fetch(`https://tech-zone-iota.vercel.app/detailsProducts/${params.id}`)
+        loader: ({params}) => fetch(`https://technology-server-side.vercel.app/detailsProducts/${params.id}`)
       }
     ])
   },

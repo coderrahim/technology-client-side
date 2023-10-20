@@ -9,7 +9,7 @@ const BrandProducts = () => {
     const brandProducts = useLoaderData()
 
     return (
-        <div className="bg-gray-100 rounded-lg">
+        <div className="bg-gray-100 dark:bg-gray-900 rounded-lg py-12">
             <div className="max-w-7xl mx-auto m-5">
                 {
                     brandProducts.length == 0 ?
@@ -20,7 +20,7 @@ const BrandProducts = () => {
                             </p>
 
                             <div className="flex gap-5">
-                                <Link to={-1}><button className="btn  btn-primary">Go Back</button></Link>
+                                <Link to='/addproduct'><button className="btn  btn-primary">Add Product</button></Link>
 
                                 <Link to='/'><button className="btn  btn-secondary">Go Home</button></Link>
                             </div>
@@ -63,14 +63,16 @@ const BrandProducts = () => {
                             </div>
 
 
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-violet-700 py-12 uppercase">Latest <span className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-orange-600"> Products</span></h2>
+                            <div>
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-violet-700 py-12 uppercase">Latest <span className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-orange-600"> Products</span></h2>
 
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 m-5">
-                                {
-                                    brandProducts.map(product => <SingleBrandProduct key={product._id} singleProduct={product}>
+                                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 m-5">
+                                    {
+                                        brandProducts.map(product => <SingleBrandProduct key={product._id} singleProduct={product}>
 
-                                    </SingleBrandProduct>)
-                                }
+                                        </SingleBrandProduct>)
+                                    }
+                                </div>
                             </div>
                         </div>
                 }

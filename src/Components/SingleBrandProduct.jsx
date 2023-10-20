@@ -5,9 +5,9 @@ const SingleBrandProduct = ({ singleProduct }) => {
 
     const { _id, name, brand, product, image, price,  } = singleProduct
     return (
-        <div>
-            <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border space-y-3">
-                <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white h-72 rounded-xl bg-clip-border">
+        <div className=''>
+            <div className="relative flex flex-col text-gray-700 bg-white dark:bg-gray-800 dark:text-white shadow-md w-96 rounded-xl bg-clip-border space-y-3">
+                <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white dark:bg-gray-800 h-72 rounded-xl bg-clip-border">
                     <img
                         src={image}
                         className="object-cover w-full h-full border rounded-lg shadow-sm"

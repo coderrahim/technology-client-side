@@ -6,7 +6,9 @@ import Brands from "../Components/Brands";
 
 
 const Home = () => {
-    const brands = useLoaderData()
+    const brands = useLoaderData();
+    console.log(brands)
+
     return (
         <div>
             {/* Banner SEction */}
@@ -22,7 +24,7 @@ const Home = () => {
             </div>
 
             {/* BRAND SECTION */}
-            <div className="bg-gray-100 py-12">
+            <div className="bg-gray-100 dark:bg-gray-900 py-12">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-violet-700 py-12 uppercase">Our <span className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-orange-600"> Brand</span></h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 m-4 my-12 max-w-7xl mx-auto">

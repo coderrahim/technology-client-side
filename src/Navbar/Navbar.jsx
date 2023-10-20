@@ -1,10 +1,43 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
+
+  const [theme, setTheme] = useState("");
+
+  useEffect(() => {
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const userPreferredTheme = localStorage.getItem("theme");
+
+    if (userPreferredTheme) {
+      setTheme(userPreferredTheme);
+    } else {
+      if (prefersDarkScheme) {
+        setTheme("night");
+      } else {
+        setTheme("light");
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme) {
+      localStorage.setItem("theme", theme);
+      document.documentElement.setAttribute("data-theme", theme);
+      theme === "night"
+        ? document.documentElement.classList.add("dark")
+        : document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "night" : "light";
+    setTheme(newTheme);
+  };
 
   const navMenu = <>
     <li><NavLink to='/'> Home </NavLink></li>
@@ -13,8 +46,8 @@ const Navbar = () => {
     <li><NavLink to='/addbrand'>Add brand</NavLink></li>
   </>
   return (
-    < div className=" shadow-md">
-      <div className="navbar bg-base-100 h-20 max-w-7xl mx-auto dark:bg-black">
+    < div className=" shadow-md sticky top-0 z-50 dark:bg-indigo-950 bg-white">
+      <div className="navbar bg-base-100 dark:bg-indigo-950 h-20 max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,7 +69,21 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="navbar-end">
+        {/* DArk mode */}
+
+        <li className="ml-5">
+          <Link to={`#`} className="text-lg" onClick={toggleTheme}>
+            {" "}
+            {theme === "night" ? (
+              <BsFillSunFill className="text-white" size={25} />
+            ) : (
+              <BsFillMoonStarsFill size={20} />
+            )}
+          </Link>
+        </li>
+
+        <div className="navbar-end flex items-center">
+          
           {
             user ?
               <div className="flex items-center justify-center gap-5">
