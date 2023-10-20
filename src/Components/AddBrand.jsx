@@ -14,7 +14,7 @@ const AddBrand = () => {
         const newBrand = {name, brand, image}
         console.log(newBrand)
 
-        fetch('http://localhost:5000/brands', {
+        fetch('https://tech-zone-iota.vercel.app/brands', {
             method: "POST",
             headers: {
                 "content-type":"application/json"

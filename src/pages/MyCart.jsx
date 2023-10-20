@@ -19,7 +19,7 @@ const MyCart = () => {
         }).then((result) => {
             if (result.isConfirmed) {
             
-                fetch(`http://localhost:5000/addtocart/${_id}`, {
+                fetch(`https://tech-zone-iota.vercel.app/addtocart/${_id}`, {
                     method: "DELETE"
                 })
                 .then(res => res.json())

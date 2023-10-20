@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SingleBrandProduct = ({ singleProduct }) => {
 
-    const { _id, name, brand, product, image, price, ratting, } = singleProduct
+    const { _id, name, brand, product, image, price,  } = singleProduct
     return (
         <div>
             <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border space-y-3">
@@ -27,12 +27,27 @@ const SingleBrandProduct = ({ singleProduct }) => {
                         <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
                             {brand}
                         </p>
-                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
-                            Rating: {ratting}
-                        </p>
+
+                        <br />
+
                         <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
                             {product}
                         </p>
+                    </div>
+
+                    <div className='flex items-center justify-between gap-4 my-3'>
+
+                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
+                            Rating: 
+                        </p>
+
+                        <div className="rating block w-full mx-auto">
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        </div>
                     </div>
 
                 </div>

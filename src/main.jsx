@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/brands')
+        loader: () => fetch('https://tech-zone-iota.vercel.app/brands')
       },
       {
         path: '/addproduct',
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: '/mycart',
         element: <PrivateRouter><MyCart></MyCart></PrivateRouter>,
-        loader: () => fetch('http://localhost:5000/addtocart')
+        loader: () => fetch('https://tech-zone-iota.vercel.app/addtocart')
       },
       {
         path: '/login',
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: '/allproduct/',
         element: <AddedAllProducts></AddedAllProducts>,
-        loader: () => fetch('http://localhost:5000/products'),
+        loader: () => fetch('https://tech-zone-iota.vercel.app/products'),
       },
       {
         path: '/addbrand',
@@ -61,17 +61,17 @@ const router = createBrowserRouter([
       {
         path: '/brandproducts/:brand',
         element: <BrandProducts></BrandProducts>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
+        loader: ({ params }) => fetch(`https://tech-zone-iota.vercel.app/products/${params.brand}`)
       },
       {
         path: '/detailsProduct/:id',
         element: <PrivateRouter><DetailsProduct></DetailsProduct></PrivateRouter>,
-        loader: ({ params }) => fetch(`http://localhost:5000/detailsProducts/${params.id}`)
+        loader: ({ params }) => fetch(`https://tech-zone-iota.vercel.app/detailsProducts/${params.id}`)
       },
       {
         path: '/updateProduct/:id',
         element: <PrivateRouter><UpdateProduct></UpdateProduct></PrivateRouter>,
-        loader: ({params}) => fetch(`http://localhost:5000/detailsProducts/${params.id}`)
+        loader: ({params}) => fetch(`https://tech-zone-iota.vercel.app/detailsProducts/${params.id}`)
       }
     ])
   },

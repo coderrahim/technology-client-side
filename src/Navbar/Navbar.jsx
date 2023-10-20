@@ -14,7 +14,7 @@ const Navbar = () => {
   </>
   return (
     < div className=" shadow-md">
-      <div className="navbar bg-base-100 h-20 max-w-7xl mx-auto">
+      <div className="navbar bg-base-100 h-20 max-w-7xl mx-auto dark:bg-black">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,6 +35,7 @@ const Navbar = () => {
             {navMenu}
           </ul>
         </div>
+
         <div className="navbar-end">
           {
             user ?

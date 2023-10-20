@@ -12,7 +12,7 @@ const DetailsProduct = () => {
     const AddToCart = () => {
     
     // // post to mongodb
-    fetch('http://localhost:5000/addtocart', {
+    fetch('https://tech-zone-iota.vercel.app/addtocart', {
         method: "POST",
         headers: {
             "content-type":"application/json"
