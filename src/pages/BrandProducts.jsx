@@ -29,7 +29,7 @@ const BrandProducts = () => {
                         :
 
                         <div>
-                            <div className=" md:w-3/4 lg:w-2/4 mx-auto">
+                            <div className=" md:w-3/4 mx-auto">
                                 <div className="carousel  text-center rounded-lg m-4">
                                     <div id="slide1" className="carousel-item relative w-full">
                                         <img src='https://i.ibb.co/nbsxrzQ/ADS-2.jpg' className="w-full" />

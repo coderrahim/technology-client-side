@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import { FaStar } from "react-icons/fa"
 
 const SingleBrandProduct = ({ singleProduct }) => {
 
-    const { _id, name, brand, product, image, price,  } = singleProduct
+    const { _id, name, brand, product, image, price, ratting } = singleProduct
     return (
         <div className=''>
             <div className="relative flex flex-col text-gray-700 bg-white dark:bg-gray-800 dark:text-white shadow-md w-96 rounded-xl bg-clip-border space-y-3">
@@ -18,36 +19,33 @@ const SingleBrandProduct = ({ singleProduct }) => {
                         <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900">
                             {name}
                         </p>
-                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900">
+                        <p className="block font-sans text-xl antialiased font-medium leading-relaxed text-blue-gray-900">
                             ${price}
                         </p>
                     </div>
-                    <hr />
-                    <div className="flex items-center justify-between my-3">
-                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
-                            {brand}
+
+                    <div className="flex items-center justify-between my-5">
+                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize border-violet-600 border rounded-full px-3 p-1">
+                            Brand: {brand}
                         </p>
 
                         <br />
 
-                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
-                            {product}
+                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize border-violet-600 border rounded-full px-3 p-1">
+                            Type: {product}
                         </p>
                     </div>
 
-                    <div className='flex items-center justify-between gap-4 my-3'>
+                    <div className='flex items-center justify-center gap-4 mt-5'>
 
-                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
-                            Rating: 
-                        </p>
+                        <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">Ratting</p>
 
-                        <div className="rating block w-full mx-auto">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                        <div className="flex text-orange-500">
+                            {[...Array(parseInt(ratting))].map(star => {
+                                return <FaStar key={star?._id}></FaStar>;
+                            })}
                         </div>
+
                     </div>
 
                 </div>

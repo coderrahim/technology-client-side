@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-
+import { FaStar } from "react-icons/fa"
 
 const MyCart = () => {
     const loadedCartProduct = useLoaderData()
@@ -86,15 +86,21 @@ const MyCart = () => {
                                                 ${cart?.price}
                                             </p>
                                         </div>
-                                        <hr />
-                                        <div className="flex items-center justify-between my-3">
-                                            <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
+
+                                        <div>
+                                            <div className="flex text-orange-500">
+                                                {[...Array(parseInt(parseInt(cart?.ratting)))].map(star => {
+                                                    return <FaStar key={star?._id}></FaStar>;
+                                                })}
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center justify-between mt-5">
+                                            <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize border-violet-600 border rounded-full px-3 p-1">
                                                 {cart?.brand}
                                             </p>
-                                            <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
-                                                Rating: {cart?.ratting}
-                                            </p>
-                                            <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize">
+
+                                            <p className="block font-sans text-lg antialiased font-medium leading-relaxed text-blue-gray-900 capitalize border-violet-600 border rounded-full px-3 p-1">
                                                 {cart?.product}
                                             </p>
                                         </div>
@@ -112,7 +118,7 @@ const MyCart = () => {
 
 
 
-                            </div>)
+                        </div>)
                     }
                 </div>
             }

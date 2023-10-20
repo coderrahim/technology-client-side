@@ -5,9 +5,9 @@ import Swal from "sweetalert2";
 const DetailsProduct = () => {
 
     const detailsProduct = useLoaderData()
-    const { name, brand, product, image, price, description } = detailsProduct;
+    const { name, brand, product, image, price, description, ratting } = detailsProduct || {};
 
-    const SelectProduct = { name, brand, product, image, price, description }
+    const SelectProduct = { name, brand, product, image, price, description, ratting }
 
     const AddToCart = () => {
     
