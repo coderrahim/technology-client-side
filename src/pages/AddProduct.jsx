@@ -38,27 +38,27 @@ const AddProduct = () => {
 
     return (
         <div>
-            <div className="hero bg-base-200">
+            <div className="hero bg-base-200 dark:bg-gray-900">
                 <div className="">
         
                     <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-violet-700 py-5 uppercase">Add <span className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-orange-600">Product</span></h2>
 
                     <div className="card flex-shrink-0 w-full max-w-lg shadow-xl bg-base-100">
 
-                        <form className="card-body" onSubmit={handleAddProduct}>
+                        <form className="card-body dark:bg-gray-800 dark:tewh rounded-xl" onSubmit={handleAddProduct}>
 
-                            <div className="form-control">
+                            <div className="form-control ">
                                 <label className="label">
-                                    <span className="label-text">Product Name</span>
+                                    <span className="label-text dark:text-white">Product Name</span>
                                 </label>
-                                <input type="text" name="name" className="input input-bordered" required />
+                                <input type="text" name="name" className="input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Brand Name</span>
+                                    <span className="label-text dark:text-white">Brand Name</span>
                                 </label>
-                                <select name="brand" className="select select-bordered w-full max-w-xs" required>
+                                <select name="brand" className="select select-bordered w-full max-w-xs dark:bg-gray-800 dark:text-white dark:border-white" required>
                                     <option value="" selected disabled>Select Brand</option>
                                     <option value="apple">Apple</option>
                                     <option value="google">Google</option>
@@ -71,9 +71,9 @@ const AddProduct = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Product Type</span>
+                                    <span className="label-text dark:text-white">Product Type</span>
                                 </label>
-                                <select name="product" className="select select-bordered w-full max-w-xs" required>
+                                <select name="product" className="select select-bordered w-full max-w-xs dark:bg-gray-800 dark:text-white dark:border-white" required>
                                     <option selected disabled value="">Select Product</option>
                                     <option value="phone">Phone</option>
                                     <option value="laptop">Laptop</option>
@@ -86,30 +86,30 @@ const AddProduct = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Image URL</span>
+                                    <span className="label-text dark:text-white">Image URL</span>
                                 </label>
-                                <input type="text" name="image" className="input input-bordered" required />
+                                <input type="text" name="image" className="input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Price</span>
+                                    <span className="label-text dark:text-white">Price</span>
                                 </label>
-                                <input type="number" name="price" className="input input-bordered" required />
+                                <input type="number" name="price" className="input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Ratting</span>
+                                    <span className="label-text dark:text-white">Ratting</span>
                                 </label>
-                                <input type="number" min={0} max={5} name="ratting" className="input input-bordered" required />
+                                <input type="number" min={0} max={5} name="ratting" className="input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Short Description</span>
+                                    <span className="label-text dark:text-white">Short Description</span>
                                 </label>                                
-                                <textarea name="description" id="" cols="30" rows="5" className=" input input-bordered" ></textarea>
+                                <textarea name="description" id="" cols="30" rows="5" className=" input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" ></textarea>
                             </div>
 
                             <div className="form-control mt-6 ">

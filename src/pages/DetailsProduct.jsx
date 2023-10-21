@@ -33,8 +33,8 @@ const DetailsProduct = () => {
 };
 
     return (
-        <div>
-            <div className=" flex flex-col text-gray-700 bg-white dark:bg-gray-800 dark:text-white shadow-md rounded-xl bg-clip-border space-y-3 md:w-3/4 mt-8 mx-auto">
+        <div className="dark:bg-gray-900">
+            <div className=" flex flex-col text-gray-700 bg-white dark:bg-gray-800 dark:text-white shadow-md rounded-xl bg-clip-border space-y-3 md:w-3/4 pt-8 mx-auto">
                 <div className="relative mt-4 overflow-hidden text-gray-700 rounded-xl bg-clip-border w-80 mx-auto">
                     <img
                         src={image}

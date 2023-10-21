@@ -2,11 +2,11 @@
 
 const FAQ = () => {
     return (
-        <div className="dark:bg-gray-900 bg-gray-100">
+        <div className="dark:bg-gray-900 bg-gray-100 dark:text-white">
             <div className="py-12 max-w-7xl mx-auto">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-violet-700 py-12 uppercase">Freequently <span className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-orange-600">ask question</span></h2>
 
-                <div className="collapse collapse-arrow bg-white dark:bg-gray-800">
+                <div className="collapse collapse-arrow bg-gray-200 dark:bg-gray-800 ">
                     <input type="radio" name="my-accordion-2" checked="checked" />
                     <div className="collapse-title text-xl font-medium">
                         How do I place an order?
@@ -16,7 +16,7 @@ const FAQ = () => {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-white dark:bg-gray-800">
+                <div className="collapse collapse-arrow bg-gray-200 dark:bg-gray-800">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                         What payment methods do you accept?
@@ -26,7 +26,7 @@ const FAQ = () => {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-white dark:bg-gray-800">
+                <div className="collapse collapse-arrow bg-gray-200 dark:bg-gray-800">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                         How can I track my order?
@@ -36,7 +36,7 @@ const FAQ = () => {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-white dark:bg-gray-800">
+                <div className="collapse collapse-arrow bg-gray-200 dark:bg-gray-800">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                         What is your return policy?

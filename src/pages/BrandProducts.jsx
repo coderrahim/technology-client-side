@@ -9,11 +9,11 @@ const BrandProducts = () => {
     const brandProducts = useLoaderData()
 
     return (
-        <div className="bg-gray-100 dark:bg-gray-900 rounded-lg py-12">
-            <div className="max-w-7xl mx-auto m-5">
+        <div className="bg-gray-100 dark:bg-gray-900 ">
+            <div className="max-w-7xl mx-auto ">
                 {
                     brandProducts.length == 0 ?
-                        <div className="min-h-fit flex flex-col items-center justify-center">
+                        <div className="h-screen flex flex-col items-center justify-center dark:text-white">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl mt-10 font-bold">Sorry!</h1>
                             <p className="text-xl my-6">No product available in this Brand, <br />
                                 Please come back again leter.

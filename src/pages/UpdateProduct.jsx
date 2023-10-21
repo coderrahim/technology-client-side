@@ -39,27 +39,27 @@ const UpdateProduct = () => {
 
     return (
         <div>
-            <div className="hero bg-base-200">
+            <div className="hero bg-base-200 dark:bg-gray-900">
                 <div className="">
 
                     <h2 className="text-5xl text-center font-bold text-violet-700 py-12 uppercase">Update <span className="text-5xl text-center font-bold text-orange-600">Product</span></h2>
 
                     <div className="card flex-shrink-0 w-full max-w-lg shadow-xl bg-base-100">
 
-                        <form className="card-body" onSubmit={handleUpdateProduct}>
+                        <form className="card-body dark:bg-gray-800 rounded-xl" onSubmit={handleUpdateProduct}>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Product Name </span>
+                                    <span className="label-text dark:text-white">Product Name </span>
                                 </label>
-                                <input type="text" name="name" defaultValue={name} className="input input-bordered" required />
+                                <input type="text" name="name" defaultValue={name} className="input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Brand Name</span>
+                                    <span className="label-text dark:text-white">Brand Name</span>
                                 </label>
-                                <select name="brand" defaultValue={brand} className="select select-bordered w-full max-w-xs" required>
+                                <select name="brand" defaultValue={brand} className="select select-bordered w-full max-w-xl dark:bg-gray-800 dark:text-white dark:border-white" required>
                                     <option value="" selected disabled>Select Brand</option>
                                     <option value="apple">Apple</option>
                                     <option value="google">Google</option>
@@ -72,9 +72,9 @@ const UpdateProduct = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Product Type</span>
+                                    <span className="label-text dark:text-white">Product Type</span>
                                 </label>
-                                <select name="product" defaultValue={product} className="select select-bordered w-full max-w-xs" required>
+                                <select name="product" defaultValue={product} className="select select-bordered w-full max-w-xl dark:bg-gray-800 dark:text-white dark:border-white" required>
                                     <option selected disabled value="">Select Product</option>
                                     <option value="phone">Phone</option>
                                     <option value="laptop">Laptop</option>
@@ -87,23 +87,23 @@ const UpdateProduct = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Image URL</span>
+                                    <span className="label-text dark:text-white">Image URL</span>
                                 </label>
-                                <input type="text" name="image" defaultValue={image} className="input input-bordered" required />
+                                <input type="text" name="image" defaultValue={image} className="input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Price</span>
+                                    <span className="label-text dark:text-white">Price</span>
                                 </label>
-                                <input type="number" name="price" defaultValue={price} className="input input-bordered" required />
+                                <input type="number" name="price" defaultValue={price} className="input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Ratting</span>
+                                    <span className="label-text dark:text-white">Ratting</span>
                                 </label>
-                                <input type="number" min={0} max={5} name="ratting" defaultValue={ratting} className="input input-bordered" required />
+                                <input type="number" min={0} max={5} name="ratting" defaultValue={ratting} className="input input-bordered dark:bg-gray-800 dark:text-white dark:border-white" required />
                             </div>
 
                             {/* <div className="form-control">
